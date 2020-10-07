@@ -1,0 +1,37 @@
+.sliderBackground {
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 400px;
+    height: 500px;
+    background-color: gray;
+}
+
+.sliderValue {
+    background-color: gray;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    display: none !important;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(161, 167, 255);
+    width: 50%;
+
+}
+

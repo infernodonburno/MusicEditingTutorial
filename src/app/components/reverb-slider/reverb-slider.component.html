@@ -1,0 +1,40 @@
+<mat-card class="sliderBackground">  
+    <mat-radio-group class="options" aria-label="Select an option">
+        <mat-radio-button value="1">Volume</mat-radio-button>
+        <mat-radio-button value="2">Reverb</mat-radio-button>
+    </mat-radio-group>
+
+    <div>
+        {{someValue}}
+    </div>
+    <div>
+        <mat-slider 
+            class="sliderReverb"
+            [disabled]="disabled"
+            [invert]="invert"
+            [max]="max"
+            [min]="min"
+            [step]="step"
+            [thumbLabel]="thumbLabel"
+            [tickInterval]="getSliderTickInterval()"
+            [(ngModel)]="value"
+            vertical
+            (input)="someValue = $event.value" 
+            [value]="someValue"
+            
+        >
+        </mat-slider>
+    </div>
+    
+    <div>
+        <audio id="mysong" [volume]="someValue" #myAudio class="audioFile" controls controlsList="nodownload"
+        
+        >
+            <source src="../../../assets/Nostalaxy.wav" type="audio/ogg">
+            <source src="../../../assets/Nostalaxy.wav" type="audio/mpeg">
+                
+          </audio>
+    </div>
+    
+    
+</mat-card>
